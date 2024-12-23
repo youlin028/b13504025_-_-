@@ -27,17 +27,21 @@
 - **`!complete_task YYYY-MM-DD TIME-PERIOD`**: 將任務標示為完成，例如：`!complete_task 2024-12-20 8-10時`
 
 ## (3) 程式的架構 Program Architecture
+
+<pre>
 Discord-Bot/
-├── main.py          # Bot 主程式入口
-├── **commands/**
-│   ├── plan.py      # 處理計畫相關指令
-│   ├── calendar.py  # 處理月曆指令
-├── **data/**
-│   ├── plans.json   # 儲存用戶計畫數據
-├── **utils/**
-│   ├── helpers.py   # 工具函數和數據處理
-├── **requirements.txt** # 所需依賴
-└── README.md        # 文件
+├── main.py               # Bot 主程式入口
+├── commands/
+│   ├── plan.py           # 處理計畫相關指令
+│   ├── calendar.py       # 處理月曆指令
+├── data/
+│   └── plans.json        # 儲存用戶計畫數據
+├── utils/
+│   └── helpers.py        # 工具函數和數據處理
+├── requirements.txt      # 所需依賴
+└── README.md             # 文件
+</pre>
+
 
 - **核心元件**：
   - `plan.py`：處理每日計劃相關邏輯，如初始化和新增任務。
